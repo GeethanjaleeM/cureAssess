@@ -1,0 +1,35 @@
+Package: cureAssess
+Type: Package
+Title: Assessing Cure Model Appropriateness for Survival Data
+Version: 0.1.0
+Authors@R: 
+    person(
+      given = "Geethanjalee",
+      family = "Mudunkotuwa",
+      role = c("aut", "cre"),
+      email = "geethanjaleem@gmail.com"
+    )
+Description: Provides tools for assessing whether cure models are appropriate
+    for right-censored survival data. The package implements a two-stage
+    workflow including Kaplan-Meier visualization, parametric cure and
+    non-cure model comparison using AIC, and diagnostic procedures such as
+    Maller-Zhou statistics, Shen's test, immune summaries, and the RECeUS method.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports:
+    survival,
+    flexsurv,
+    flexsurvcure,
+    survminer,
+    ggplot2,
+    dplyr,
+    stats
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
