@@ -20,3 +20,18 @@ Returns a summary of a \code{cure.appropriateness} object, including
 the best model identified during screening, the AIC comparison
 table, tests performed, and the final recommendation.
 }
+\examples{
+library(survival)
+
+res <- cure.appropriateness(
+  data = gbsg,
+  time = "rfstime",
+  status = "status",
+  time_scale = "days_to_years",
+  plot_km = FALSE,
+  run_tests = "no"
+)
+
+summary(res)
+
+}

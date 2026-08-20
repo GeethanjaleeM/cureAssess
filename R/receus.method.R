@@ -84,6 +84,7 @@
 #' Selukar S, Othus M (2023).
 #' *RECeUS: Ratio estimation of censored uncured subjects.*
 #' Statistics in Medicine, 42(3), 209--227.
+#' \doi{10.1002/sim.9610}
 #'
 #' @examples
 #' library(survival)
@@ -121,8 +122,8 @@ receus.method <- function(data, dist = "exp", whichTau = NULL) {
 
     interpretation <- paste(
       "Both RECeUS conditions are satisfied:",
-      "pi_hat >", 0.025, "and r_hat <", 0.05,
-      ". This suggests the presence of a cure fraction",
+      "pi_hat > 0.025 and r_hat < 0.05.",
+      "This suggests the presence of a cure fraction",
       "and sufficient follow-up for reliable cure model estimation."
     )
 
@@ -152,7 +153,7 @@ receus.method <- function(data, dist = "exp", whichTau = NULL) {
   }
 
   out <- list(
-    method = "RECeUS method (Selukar et al.,2023)",
+    method = "RECeUS method (Selukar & Othus, 2023)",
     dist = dist,
     tau = whichTau,
     estimates = res,

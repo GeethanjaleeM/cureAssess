@@ -28,25 +28,24 @@ may indicate the presence of a \emph{cure fraction}, meaning that a subset of
 individuals will never experience the event of interest.
 }
 \details{
-The statistic is \code{qn = Nn / n}, where \code{Nn} is the number of events
-falling in the late-time window \code{(2*Y* - Y_max, Y*]}, \code{Y*} is the
-largest event time, and \code{Y_max} is the largest observed time. The width of
-this window equals the gap \code{Y_max - Y*} between the last event and the end
-of follow-up. A long plateau (sufficient follow-up) produces a wide window that
-captures many events, so \strong{larger} values of \code{qn} indicate stronger
-evidence of sufficient follow-up and a survival plateau. \strong{Smaller} values
-indicate that events continue up to the end of follow-up, providing weaker
-evidence for a plateau.
+The statistic is \code{qn = Nn / n}, where \code{Nn} is the number of events falling in
+the late-time window \verb{(2*Y* - Y_max, Y*]}, \verb{Y*} is the largest event time, and
+\code{Y_max} is the largest observed time. The width of this window equals the gap
+\verb{Y_max - Y*} between the last event and the end of follow-up. A long plateau
+(sufficient follow-up) produces a wide window that captures many events, so
+\strong{larger} values of \code{qn} indicate stronger evidence of sufficient follow-up
+and a survival plateau. \strong{Smaller} values indicate that events continue up to
+the end of follow-up, providing weaker evidence for a plateau.
 
 For a formal decision, this implementation uses the companion Maller-Zhou
 statistic \code{alpha_n = (1 - qn)^n} (Maller & Zhou 1994, their eq. 5):
 sufficient follow-up is supported when \code{alpha_n < 0.05}, equivalently when
-\code{qn} exceeds \code{1 - 0.05^(1/n)} (a threshold that depends on the sample
-size \code{n}). Note this \code{alpha_n}-equivalent rule is the same decision
-used by \code{\link{mz.test}}; the separately calibrated \code{qn} critical
-values of Maller et al. (2024), which reduce the type-I inflation of
-\code{alpha_n}, are not implemented here. The \code{qn} statistic itself is
-reported and is directionally informative regardless of the cutoff used.
+\code{qn} exceeds \code{1 - 0.05^(1/n)} (a threshold that depends on the sample size
+\code{n}). Note this \code{alpha_n}-equivalent rule is the same decision used by
+\code{\link[=mz.test]{mz.test()}}; the exact finite-sample critical values for \code{qn} derived by
+Maller, Resnick and Shemehsavar (2024) are not implemented here. The \code{qn}
+statistic itself is reported and is directionally informative regardless of
+the cutoff used.
 
 The statistic can only be computed when the largest observed follow-up time
 is a censored observation (i.e., follow-up extends beyond the last event).
@@ -66,17 +65,21 @@ res
 
 }
 \references{
-Maller RA, et al.  (2024).
-\emph{The qn test for the cure proportion.}
-Stat Med, 2024;43(8):1557-75.
+Maller RA, Resnick S, Shemehsavar S (2024).
+\emph{Finite sample and asymptotic distributions of a statistic for sufficient
+follow-up in cure models.}
+Canadian Journal of Statistics, 52(2), 359--379.
+\doi{10.1002/cjs.11771}
 
 Maller RA, Zhou S (1992).
 \emph{Estimating the proportion of immunes in a censored sample.}
-Biometrika, 79(4), 731–739.
+Biometrika, 79(4), 731--739.
+\doi{10.1093/biomet/79.4.731}
 
 Maller RA, Zhou S (1994).
 \emph{Testing for sufficient follow-up and outliers in survival data.}
-Journal of the American Statistical Association, 89(428), 1499–1506.
+Journal of the American Statistical Association, 89(428), 1499--1506.
+\doi{10.1080/01621459.1994.10476889}
 
 Maller RA, Zhou X (1996).
 \emph{Survival Analysis with Long-term Survivors.}

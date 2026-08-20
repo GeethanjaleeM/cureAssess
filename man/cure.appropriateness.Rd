@@ -32,12 +32,12 @@ cure-model distribution from the Stage 1 AIC table.}
 
 \item{run_tests}{One of \code{"auto"}, \code{"yes"}, or \code{"no"}.}
 
-\item{include_lognormal}{Logical; passed to \code{\link{model.fitting}}. If
-\code{TRUE}, the lognormal cure and non-cure models are added to the Stage 1
-candidate set. Defaults to \code{FALSE} so the candidate set matches the four
-distributions used in the tutorial. Because the automatic RECeUS distribution
-(\code{dist = NULL}) is selected as the smallest-AIC cure model, enabling
-lognormal can change both the selected model and the RECeUS conclusion.}
+\item{include_lognormal}{Logical; passed to \code{\link[=model.fitting]{model.fitting()}}. If \code{TRUE}, the
+lognormal cure and non-cure models are added to the Stage 1 candidate set.
+Defaults to \code{FALSE} so the candidate set matches the four distributions used
+in the tutorial. Because the automatic RECeUS distribution (\code{dist = NULL})
+is selected as the smallest-AIC cure model, enabling lognormal can change
+both the selected model and the RECeUS conclusion.}
 }
 \value{
 An object of class \code{"cure.appropriateness"} containing:
@@ -111,4 +111,35 @@ immune summaries and RECeUS-style outputs.
 If the smallest-AIC model is a non-cure model, the function reports
 that a cure model is not supported by the initial model-comparison step,
 while still allowing the user to proceed with additional tests if desired.
+}
+\examples{
+library(survival)
+
+# Stage 1 only: Kaplan-Meier screening and AIC model comparison
+res <- cure.appropriateness(
+  data = gbsg,
+  time = "rfstime",
+  status = "status",
+  time_scale = "days_to_years",
+  plot_km = FALSE,
+  run_tests = "no"
+)
+res
+
+# Stage 1 and Stage 2: also run the cure-appropriateness diagnostics
+res_full <- cure.appropriateness(
+  data = gbsg,
+  time = "rfstime",
+  status = "status",
+  time_scale = "days_to_years",
+  plot_km = FALSE,
+  run_tests = "yes"
+)
+summary(res_full)
+
+}
+\seealso{
+\code{\link{prepare.surv.data}},
+\code{\link{model.fitting}},
+\code{\link{run.cure.tests}}
 }

@@ -113,4 +113,5 @@ res
 Selukar S, Othus M (2023).
 \emph{RECeUS: Ratio estimation of censored uncured subjects.}
 Statistics in Medicine, 42(3), 209--227.
+\doi{10.1002/sim.9610}
 }

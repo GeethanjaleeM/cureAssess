@@ -20,10 +20,10 @@
 #' sufficient follow-up is supported when `alpha_n < 0.05`, equivalently when
 #' `qn` exceeds `1 - 0.05^(1/n)` (a threshold that depends on the sample size
 #' `n`). Note this `alpha_n`-equivalent rule is the same decision used by
-#' [mz.test()]; the separately calibrated `qn` critical values of Maller et al.
-#' (2024), which reduce the type-I inflation of `alpha_n`, are not implemented
-#' here. The `qn` statistic itself is reported and is directionally informative
-#' regardless of the cutoff used.
+#' [mz.test()]; the exact finite-sample critical values for `qn` derived by
+#' Maller, Resnick and Shemehsavar (2024) are not implemented here. The `qn`
+#' statistic itself is reported and is directionally informative regardless of
+#' the cutoff used.
 #'
 #' The statistic can only be computed when the largest observed follow-up time
 #' is a censored observation (i.e., follow-up extends beyond the last event).
@@ -41,17 +41,21 @@
 #' }
 #'
 #' @references
-#' Maller RA, et al.  (2024).
-#' *The qn test for the cure proportion.*
-#' Stat Med, 2024;43(8):1557-75.
+#' Maller RA, Resnick S, Shemehsavar S (2024).
+#' *Finite sample and asymptotic distributions of a statistic for sufficient
+#' follow-up in cure models.*
+#' Canadian Journal of Statistics, 52(2), 359--379.
+#' \doi{10.1002/cjs.11771}
 #'
 #' Maller RA, Zhou S (1992).
 #' *Estimating the proportion of immunes in a censored sample.*
-#' Biometrika, 79(4), 731–739.
+#' Biometrika, 79(4), 731--739.
+#' \doi{10.1093/biomet/79.4.731}
 #'
 #' Maller RA, Zhou S (1994).
 #' *Testing for sufficient follow-up and outliers in survival data.*
-#' Journal of the American Statistical Association, 89(428), 1499–1506.
+#' Journal of the American Statistical Association, 89(428), 1499--1506.
+#' \doi{10.1080/01621459.1994.10476889}
 #'
 #' Maller RA, Zhou X (1996).
 #' *Survival Analysis with Long-term Survivors.*

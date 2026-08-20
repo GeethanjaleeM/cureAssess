@@ -30,7 +30,7 @@ potential cure fraction.
 }
 \details{
 The test examines the pattern of events near the end of follow-up. If a
-cure fraction exists, the Kaplan–Meier survival curve will tend to flatten
+cure fraction exists, the Kaplan-Meier survival curve will tend to flatten
 (plateau) because a subset of individuals will never experience the event
 of interest. In contrast, if no cure fraction exists, events should
 continue to occur late in follow-up and the survival curve will continue
@@ -62,5 +62,6 @@ res
 \references{
 Shen P-S (2000).
 \emph{Testing for sufficient follow-up in survival data.}
-Statistics & Probability Letters, 49(4), 313–322.
+Statistics & Probability Letters, 49(4), 313--322.
+\doi{10.1016/S0167-7152(00)00063-8}
 }

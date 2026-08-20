@@ -16,7 +16,7 @@ The input object \code{x}, returned invisibly.
 }
 \description{
 Prints the condensed summary produced by
-\code{\link{summary.cure.appropriateness}}, including the best model identified
+\code{\link[=summary.cure.appropriateness]{summary.cure.appropriateness()}}, including the best model identified
 during screening, the AIC comparison table, whether diagnostic tests were
 run, and the final recommendation.
 }
