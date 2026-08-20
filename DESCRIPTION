@@ -12,7 +12,7 @@ Authors@R: c(
     person(
       given = "Geethanjalee",
       family = "Mudunkotuwa",
-      role = "aut",
+      role = c("aut", "cph"),
       email = "geethanjaleem@gmail.com"
     ))
 Description: Assesses whether cure models are appropriate for right-censored
