@@ -9,6 +9,21 @@
 #'
 #' @return An object of class `"summary.cure.appropriateness"`
 #' containing key results from the cure model appropriateness analysis.
+#'
+#' @examples
+#' library(survival)
+#'
+#' res <- cure.appropriateness(
+#'   data = gbsg,
+#'   time = "rfstime",
+#'   status = "status",
+#'   time_scale = "days_to_years",
+#'   plot_km = FALSE,
+#'   run_tests = "no"
+#' )
+#'
+#' summary(res)
+#'
 #' @export
 summary.cure.appropriateness <- function(object, ...) {
 

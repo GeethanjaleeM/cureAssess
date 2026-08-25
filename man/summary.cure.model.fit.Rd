@@ -17,3 +17,12 @@ A data frame containing the AIC comparison of candidate models.
 \description{
 Returns the AIC comparison table from a \code{cure.model.fit} object.
 }
+\examples{
+library(survival)
+
+dat <- prepare.surv.data(gbsg, "rfstime", "status", "days_to_years")
+fit_res <- model.fitting(dat, plot_km = FALSE)
+
+summary(fit_res)
+
+}

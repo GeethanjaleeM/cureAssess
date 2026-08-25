@@ -81,6 +81,37 @@
 #'   results and optional diagnostic tests to provide a final
 #'   interpretation regarding cure model appropriateness.}
 #' }
+#'
+#' @seealso
+#' \code{\link{prepare.surv.data}},
+#' \code{\link{model.fitting}},
+#' \code{\link{run.cure.tests}}
+#'
+#' @examples
+#' library(survival)
+#'
+#' # Stage 1 only: Kaplan-Meier screening and AIC model comparison
+#' res <- cure.appropriateness(
+#'   data = gbsg,
+#'   time = "rfstime",
+#'   status = "status",
+#'   time_scale = "days_to_years",
+#'   plot_km = FALSE,
+#'   run_tests = "no"
+#' )
+#' res
+#'
+#' # Stage 1 and Stage 2: also run the cure-appropriateness diagnostics
+#' res_full <- cure.appropriateness(
+#'   data = gbsg,
+#'   time = "rfstime",
+#'   status = "status",
+#'   time_scale = "days_to_years",
+#'   plot_km = FALSE,
+#'   run_tests = "yes"
+#' )
+#' summary(res_full)
+#'
 #' @export
 cure.appropriateness <- function(
   data,

@@ -43,14 +43,17 @@
 #' Maller RA, Zhou S (1992).
 #' *Estimating the proportion of immunes in a censored sample.*
 #' Biometrika, 79(4), 731--739.
+#' \doi{10.1093/biomet/79.4.731}
 #'
 #' Maller RA, Zhou S (1994).
 #' *Testing for sufficient follow-up and outliers in survival data.*
 #' Journal of the American Statistical Association, 89(428), 1499--1506.
+#' \doi{10.1080/01621459.1994.10476889}
 #'
 #' Maller RA, Zhou S (1995).
 #' *Testing for the presence of immune or cured individuals.*
 #' Biometrics, 51, 1197--1205.
+#' \doi{10.2307/2533253}
 #'
 #' Maller RA, Zhou X (1996).
 #' *Survival Analysis with Long-term Survivors.*

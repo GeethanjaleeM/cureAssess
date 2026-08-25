@@ -11,6 +11,24 @@
 #'
 #' @return A data frame with standardized columns `Y` for survival time
 #' and `D` for event indicator, D = 1 for event and D = 0 for censoring.
+#'
+#' @seealso
+#' \code{\link{model.fitting}},
+#' \code{\link{cure.appropriateness}}
+#'
+#' @examples
+#' library(survival)
+#'
+#' # `rfstime` is recorded in days, so convert it to years
+#' dat <- prepare.surv.data(
+#'   data = gbsg,
+#'   time = "rfstime",
+#'   status = "status",
+#'   time_scale = "days_to_years"
+#' )
+#'
+#' head(dat[, c("Y", "D")])
+#'
 #' @importFrom dplyr .data
 #' @export
 prepare.surv.data <- function(data,
