@@ -10,3 +10,5 @@
 ^\.github$
 ^cran-comments\.md$
 ^\.gitattributes$
+^cureAssess-CRAN-submission-guide\.pdf$
+^CRAN-submission-guide\.md$
