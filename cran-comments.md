@@ -21,7 +21,7 @@ are cited with DOIs in the `Description` field.
 
 ```
 * checking CRAN incoming feasibility ... NOTE
-Maintainer: 'Durbadal Ghosh <reevu7@gmail.com>'
+Maintainer: 'Geethanjalee Mudunkotuwa <geethanjaleem@gmail.com>'
 
 New submission
 ```

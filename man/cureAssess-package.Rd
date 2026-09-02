@@ -64,11 +64,12 @@ Useful entry points:
 \code{\link{run.cure.tests}}
 }
 \author{
-\strong{Maintainer}: Durbadal Ghosh \email{reevu7@gmail.com}
+\strong{Maintainer}: Geethanjalee Mudunkotuwa \email{geethanjaleem@gmail.com} [copyright holder]
 
 Authors:
 \itemize{
-  \item Geethanjalee Mudunkotuwa \email{geethanjaleem@gmail.com}
+  \item Geethanjalee Mudunkotuwa \email{geethanjaleem@gmail.com} [copyright holder]
+  \item Durbadal Ghosh \email{reevu7@gmail.com}
 }
 
 }
