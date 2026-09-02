@@ -4,16 +4,16 @@ Title: Assessing Cure Model Appropriateness for Survival Data
 Version: 0.1.0
 Authors@R: c(
     person(
-      given = "Durbadal",
-      family = "Ghosh",
-      role = "cre",
-      email = "reevu7@gmail.com"
-    ),
-    person(
       given = "Geethanjalee",
       family = "Mudunkotuwa",
-      role = c("aut", "cph"),
+      role = c("aut", "cre", "cph"),
       email = "geethanjaleem@gmail.com"
+    ),
+    person(
+      given = "Durbadal",
+      family = "Ghosh",
+      role = "aut",
+      email = "reevu7@gmail.com"
     ))
 Description: Assesses whether cure models are appropriate for right-censored
     survival data, where a fraction of subjects may never experience the event
